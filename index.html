@@ -39,9 +39,23 @@
           <option value="vex-v5">VEX V5 controller :)</option>
           <option value="xbox">Xbox or logitech</option>
         </select>
-        <label> axis deadzone
-
+        <label> axis deadzone <output id="deadzone-out">0.50</output>
+          <input type="range" id="deadzone" min="0.1" max="0.9" step="0.05" value="0.5">
         </label>
+
+        <h2>controls</h2>
+        <table id="binding-table">
+
+        </table>
+        <tr data-action="drive"><td>drive fwd back</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
+        <tr data-action="left"><td>turn left</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
+        <tr data-action="right"><td>turn right</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
+        <tr data-action="intake"><td>intake</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
+        <tr data-action="outtake"><td>outtake</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
+        <tr data-action="lifts"><td>lifts</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
+      </table>
+      <p><button type="button" id="reset-bindings">reset to defaults</button></p>
+  
 
       </label>
     </section>
