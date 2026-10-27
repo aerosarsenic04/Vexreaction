@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mo's VEX driver trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Driver Reaction Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Mo's VEX driver trainer</h1>
-</body>
-</html>
+  <header class="topbar">
+    <h1>Mo's VEX Driver Reaction Trainer</h1>
+    <div class="topbar-right">
+      <span class="chip" id="pad-status">no controller</span>
+      <span class="chip">lifetime points <b id="lifetime-points">0</b></span>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="panel" id="config">
+      <h2>game mode</h2>
+      <label class="mode">
+        <input type="radio" name="mode" value="reaction" checked>
+        <b>reaction avg</b>
+        <small>10 trials, lowest average wins! wrong or early input will add time!</small>
+      </label>
+      <label class="mode">
+        <input type="radio" name="mode" value="survival">
+        <b>survival</b>
+        <small>sudden death!!! wrong, early or late input KILLS YOUR RUN!</small>
+      </label>
+      <label class="mode">
+        <input type="radio" name="mode" value="rush">
+        <b>points rush</b>
+        <small>score as many points as you can in one minute, chain correct inputs for up to 5x multipliers!! incorrect inputs will cost your points</small>
+      </label>
+
+      <h2>controller config</h2>
+      <label> layout
+        <select id="layout-select">
+          <option value="vex-v5">VEX V5 controller :)</option>
+          <option value="xbox">Xbox or logitech</option>
+        </select>
+        <label> axis deadzone
+
+        </label>
+
+      </label>
+    </section>
+  </main>
