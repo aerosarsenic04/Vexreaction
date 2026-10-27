@@ -39,7 +39,8 @@
           <option value="vex-v5">VEX V5 controller :)</option>
           <option value="xbox">Xbox or logitech</option>
         </select>
-        <label> axis deadzone <output id="deadzone-out">0.50</output>
+      </label>
+      <label> axis deadzone <output id="deadzone-out">0.50</output>
           <input type="range" id="deadzone" min="0.1" max="0.9" step="0.05" value="0.5">
         </label>
 
@@ -55,8 +56,45 @@
         <tr data-action="lifts"><td>lifts</td><td class="key"></td><td><button type="button" class="rebind">Rebind</button></td></tr>
       </table>
       <p><button type="button" id="reset-bindings">reset to defaults</button></p>
-  
+    </section>
 
-      </label>
+    <section class="panel" id="stage">
+      <div class="hud">
+        <div><span>points</span><b id="hud-points">0</b></div>
+        <div><span>streak</span><b id="hud-streak">0</b></div>
+        <div><span>next multiplier</span><b id="hud-mult">x1</b></div>
+        <div><span id="hud-progress-key">round</span><b id="hud-progress">-</b></div>
+      </div>
+      <div class="cue idle" id="cue">
+        <div id="cue-label">ready</div>
+        <div id="cue-action">press start</div>
+        <div id="cue-timer">-- ms</div>
+        <div id="cue-result"></div>
+      </div>
+      <div class="controller" id="controller"></div>
+      <p class="center"><button type="button" id="start-btn" disabled>start</button></p>
+    </section>
+    <section class="panel" id="side">
+      <h2>scoreboard</h2>
+      <table id="scoreboard">
+        <tr><td>high score</td><td id="best-points">--</td></tr>
+        <tr><td>best streak</td><td id="best-streak">--</td></tr>
+        <tr><td>fastest reaction</td><td id="best-fastest">--</td></tr>
+        <tr><td>best average</td><td id="best-average">--</td></tr>
+        <tr><td>last run</td><td id="last-run">--</td></tr>
+      </table>
+
+      <h2>history</h2>
+      <div id="history-chart"></div>
+      <h2>telemetry <button type="button" id="clear-log">clear</button></h2>
+      <div class="terminal" id="telemetry"></div>
     </section>
   </main>
+  <div class="overlay" id="connect-overlay">
+    <div>
+      <h2>press any button on your controller to connect</h2>
+      <p>browsers only see gamepads if you click a button first!!</p>
+    </div>
+  </div>
+  </body>
+  </html>
