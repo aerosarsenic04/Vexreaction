@@ -1,9 +1,9 @@
 :root {
-    --bg: #0b0e13;
-    --panel: #121820;
-    --line: #243040;
-    --text: #e6edf5;
-    --muted: #8494a8;
+    --bg: #f0e6cc;
+    --panel: #faf5e6;
+    --line: #9c8f72;
+    --text: #2e2a22;
+    --muted: #7a6f5a;
     --accent: #19d3c5;
     --blue: #2f8bff;
     --yellow: #ffd23f;
@@ -23,7 +23,7 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font: 14px/1.4 "Segoe UI", system-ui, sans-serif;
+    font: 14px/1.4 "Darumadrop One", system-ui, sans-serif;
 }
 h1,
 h2 {
@@ -103,4 +103,10 @@ h2:first-child {
     #stage {
         order: -1;
     }
+}
+
+.darumadrop-one-regular {
+  font-family: "Darumadrop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
