@@ -1,22 +1,25 @@
 :root {
     --bg: #f0e6cc;
     --panel: #faf5e6;
+    --paper: #fffdf5;
     --line: #9c8f72;
     --text: #2e2a22;
     --muted: #7a6f5a;
-    --accent: #19d3c5;
-    --blue: #2f8bff;
-    --yellow: #ffd23f;
-    --green: #3ddc84;
-     --red: #ff4d5e;
-     --mono: ui-monospace, Menlo, Consolas, monospace;
+    --accent: #1f6fb5;
+    --blue: #2563c9;
+    --yellow: #f2b800;
+    --amber: #9a5a00;
+    --green: #2e7d32;
+    --red: #b3261e;
+    --mono: ui-monospace, Menlo, Consolas, monospace;
 }
+
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 [hidden] {
-    display:none !important;
+    display: none !important;
 }
 
 body {
@@ -25,16 +28,22 @@ body {
     color: var(--text);
     font: 14px/1.4 "Darumadrop One", system-ui, sans-serif;
 }
+
 h1,
 h2 {
     margin: 0;
 }
 
 h1 {
-    font-size: 1.5px;
+    font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted);
+}
+
+h2 {
+    margin: 16px 0 6px;
+    font-size: 14px;
 }
 
 h2:first-child {
@@ -53,15 +62,11 @@ h2:first-child {
 .topbar-right {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 14px;
 }
 
 .chip {
-    padding: 4px 12px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
     color: var(--muted);
-    font-size: 12px;
 }
 
 .chip b {
@@ -70,16 +75,15 @@ h2:first-child {
 }
 
 .chip.online {
-    border-color: var(--green);
     color: var(--green);
 }
 
 .dashboard {
     display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
+    grid-template-columns: 330px minmax(0, 1fr) 330px;
     gap: 14px;
     align-items: start;
-    padding: 14px 2-px;
+    padding: 14px 20px;
 }
 
 .panel {
@@ -87,7 +91,6 @@ h2:first-child {
     padding: 16px;
     background: var(--panel);
     border: 1px solid var(--line);
-    border-radius: 10px;
 }
 
 .center {
@@ -96,17 +99,21 @@ h2:first-child {
 
 @media (max-width: 1100px) {
     .dashboard {
-        grid-template-columns: 300px minmax(0, 1fr);
-        padding: 10px;
+        grid-template-columns: 330px minmax(0, 1fr);
     }
-    
-    #stage {
-        order: -1;
+
+    #side {
+        grid-column: 1 / -1;
     }
 }
 
-.darumadrop-one-regular {
-  font-family: "Darumadrop One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (max-width: 720px) {
+    .dashboard {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 10px;
+    }
+
+    #stage {
+        order: -1;
+    }
 }
