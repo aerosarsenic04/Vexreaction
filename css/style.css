@@ -197,3 +197,36 @@ td {
     background: #efe3c0;
     border-color: var(--text);
 }
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(5, 8, 12 ,0.88);
+}
+
+.overlay div {
+    max-width: 420px; /*hauhauhahauhauhauhauha*/
+    padding: 30px;
+    text-align: center;
+    background: var(--panel);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+}
+
+.overlay h2 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 20px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.overlay p {
+    margin: 0;
+    color: var(--muted);
+}
