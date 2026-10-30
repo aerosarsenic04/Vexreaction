@@ -53,7 +53,7 @@ function pollGamepad() {
         pad.id = p.id;
         emitPad('connect', p.id);
     }
-    pad.frame = { time: performance.now(), inputs: readInputs(p) };
+    pad.frame = { time: performance.now(), inputs: readInputs(p), axes: Array.from(p.axes) };
     emitPad('frame', pad.frame);
 }
 

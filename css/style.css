@@ -230,3 +230,71 @@ td {
     margin: 0;
     color: var(--muted);
 }
+
+.controller {
+    position: relative;
+    max-width: 640px;
+    margin: 10px auto;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.controller.no-art {
+    min-height: 200px;
+    background: #e9dfc3;
+}
+
+.controller.no-art::after {
+    content: "imgfs" attr(-image);
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+    color: var(--muted);
+    font: 11px car(--mono);
+}
+
+.controller img {
+    display: block;
+    width: 100%;
+}
+
+.controller .overlay,
+.controller .knob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.overlay {
+    opacity: 0;
+}
+
+.overlay.prompt {
+    animation: show 0.4s infinite alternate;
+}
+
+.overlay.presssed {
+    opacity: 1;
+    animation: none;
+}
+
+.knob.prompt {
+    animation: dim 0.4s infinite alternate;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes dim {
+    to {
+        opacity: 0.3;
+    }
+}
