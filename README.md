@@ -9,8 +9,8 @@
 </div>
 ---
 
-##VEX gamepad reaction and control drill for VEX override drivers! Runs in browser with no need for external stuffs :)
-###A gamified experience made by Mook of team 2381A
+## VEX gamepad reaction and control drill for VEX override drivers! Runs in browser with no need for external stuffs :)
+### A gamified experience made by Mook of team 2381A
 
 Built for *Taiyaki* by **Hackclub**
 
